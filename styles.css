@@ -1,0 +1,176 @@
+@supports (box-sizing: border-box) {
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    }
+}
+ 
+body {
+    background-color: #E0F7FA;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Quicksand', sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+ 
+h2, h3 {
+    color: #3498DB;
+}
+ 
+nav {
+    align-items: center;
+    background-color: #425c77;
+    border: none;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    padding: 1px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+nav a {
+    border-radius: 999px;
+    color: black;
+    font-size: 1.05rem;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #425c77;
+    color: white;
+    cursor: pointer;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem 1rem;
+    justify-content: center;
+    padding-left: 0;
+}
+
+.profile header {
+    text-align: center;
+}
+
+.profile-img {
+    width: 150px;
+}
+
+.featured-image {
+    max-height: 400px;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+.jumbotron {
+    background-attachment: fixed;
+    background-image: url('../images/background.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFFFFF;
+    display: flex;
+    font-size: 35px;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    flex: 1 1 250px;
+    margin: 10px auto;
+    max-width: 1400px;
+    padding: 35px;
+}
+
+.card-inner .card {
+    background-color: #F9F9F9;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    flex: 1;
+    min-width: 150px;
+    padding: 10px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    box-sizing: border-box;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+}
+  
+main {
+    display: flex;
+    gap: 2rem;
+    padding: 50px;
+}
+  
+#content {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 5;
+    gap: 1rem 2rem;
+}
+
+aside {
+    flex: 1;
+}
+  
+footer {
+    background-color: #213638;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    display: inline;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+ 
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+    main {
+        flex-flow: column nowrap;
+    }
+
+    main aside {
+        align-self: center;
+    }
+}
+ 
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+    nav ul {
+        justify-content: center;
+    }
+
+    main aside {
+        align-self: stretch;
+    }
+}
